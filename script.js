@@ -1,1 +1,5 @@
-document.getElementById('form-upload').onsubmit = function(e) { e.preventDefault(); alert('Tarefa enviada!'); };
+
+document.getElementById('form-upload').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('msg-envio').textContent = 'Tarefa enviada com sucesso!';
+});

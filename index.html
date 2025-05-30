@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pós-Graduação em Inteligência Artificial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pós-Graduação em Inteligência Artificial - Módulos</h1>
+  </header>
+  <div class="container">
+    <!-- Conteúdo dos módulos -->
+    <div class="modulo">
+      <h2>Módulo 1 - Fundamentos da IA</h2>
+      <p><strong>Resumo:</strong> Introdução à inteligência artificial, conceitos-chave, histórico e aplicações práticas.</p>
+      <p><strong>Objetivo:</strong> Compreender os princípios e o impacto da IA nas diversas áreas da sociedade.</p>
+      <a href="https://www.ead.unifatea.edu.br/mod/scorm/view.php?id=23539" target="_blank">Acessar Módulo</a>
+    </div>
+    <!-- Demais módulos aqui... -->
+    <div class="upload-area">
+      <h3>Envio de Tarefas</h3>
+      <form id="formTarefa" onsubmit="return validarFormulario()">
+        <label for="arquivo">Selecione sua tarefa (PDF ou DOCX):</label><br>
+        <input type="file" id="arquivo" name="arquivo" accept=".pdf,.docx" required><br>
+        <input type="submit" value="Enviar">
+      </form>
+      <p id="mensagem"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

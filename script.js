@@ -1,14 +1,12 @@
 
-function validarFormulario() {
-  const input = document.getElementById('arquivo');
-  const mensagem = document.getElementById('mensagem');
-  if (!input.files.length) {
-    mensagem.textContent = "Por favor, selecione um arquivo.";
-    mensagem.style.color = 'red';
-    return false;
-  } else {
-    mensagem.textContent = "Arquivo enviado com sucesso! (Simulação)";
-    mensagem.style.color = 'green';
-    return false;
+document.getElementById('form-tarefas').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var arquivo = document.getElementById('arquivo').files[0];
+  if (!arquivo) {
+    alert('Por favor, selecione um arquivo para enviar.');
+    return;
   }
-}
+  // Simulação do envio, pois não temos backend
+  document.getElementById('status').textContent = 'Arquivo "' + arquivo.name + '" enviado com sucesso! (simulado)';
+  this.reset();
+});
